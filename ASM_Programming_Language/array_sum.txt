@@ -1,0 +1,22 @@
+      MOV R2, #arraynum
+      MOV R1, #0        ; index
+      MOv R0, #0        ; sum
+arrayloop:
+      LDR R3, [R2 + R1]
+      ADD R0, R0, R3
+      ADD R1, R1, #4
+      CMP R1, #arraysize
+      BLT arrayloop
+      HALT 
+      .ALIGN 256 
+arraysize: 40
+arraynum: 9 
+      8
+      7
+      6
+      5
+      4
+      3
+      2
+      1
+      0

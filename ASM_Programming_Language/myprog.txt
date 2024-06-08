@@ -1,0 +1,17 @@
+      MOV R1,#8
+      MOV R2,#10
+      AND R2, R1, #47
+      ORR R3, R1, #20
+      LSL R1, R1, #3
+      LSR R1, R1, R2
+      HALT
+      MOV R0, #50
+      MOV R5, #60
+      MOV R3, #20
+      AND R2, R1, #47
+      ORR R1, R3, R5
+      MOV R2,#14
+      EOR R3, R1, R2
+      LSL R1, R1, #3
+      LSR R1, R1, R2
+      HALT

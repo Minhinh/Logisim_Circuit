@@ -1,0 +1,18 @@
+      MOV R0, #.green
+      MOV R1, #.white
+      MOV R2, #5000000
+flash:
+      STR R0, .Pixel367
+      MOV R3, R2
+timer1:
+      sub R3, R3, #1
+      CMP R3, #0
+      BNE timer 1
+      STR R1, .Pixel367
+      MOV R3, R2
+timer2:
+      sub R3, R3, #1
+      CMP R3, #0
+      BNE timer 2
+      B flash
+      HLT
